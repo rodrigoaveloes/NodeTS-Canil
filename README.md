@@ -2,7 +2,7 @@
 
 ### instalação de depêndencias
 
-`npm install ` or `yarn`
+`npm install ` ou `yarn`
 
 ### Para rodar o projeto
 
