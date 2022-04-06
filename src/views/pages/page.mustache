@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetDevShop - O petshop do dev</title>
+    <link rel="stylesheet" href="../public/css/style.css"/>
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+</head> 
+
+
+<body>
+{{>partials/header}}
+
+{{#banner}}
+<section class="banner" style="background-image: url('/images/{{background}}')">{{title}}</section>
+<h2>{{title}} disponíveis para adoção</h2>
+{{/banner}}
+
+
+<div class="container list">
+{{#list}}
+ <div class="item">
+        <img src="/images/{{ image }}" class="item--image" />
+        <div class="item--name">{{ name }}</div>
+        <div class="item--color">Cor: {{ color }}</div>
+        <div class="item--genre">Genero: {{ sex }}</div>
+    </div>
+{{/list}}
+</div>
+
+{{^list}}
+<div class="container no-list">
+<h2>Não há animais disponiveis nessas condições.</h2>
+</div>
+{{/list}}
+   
+
+{{>partials/footer}}
+</body>
